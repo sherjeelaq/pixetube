@@ -2,7 +2,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/sherjeelaq/pixetube">
-    <img src="https://vignette.wikia.nocookie.net/outlast/images/2/2c/Amazon_Favicon.png/revision/latest?cb=20190302201843" alt="Logo" width="80" height="80">
+    <img src="public/logo512.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Pixetube</h3>
