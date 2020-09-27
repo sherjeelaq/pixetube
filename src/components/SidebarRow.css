@@ -1,0 +1,105 @@
+.sidebarRow {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.sidebarRow__icon {
+  color: #f68e5f;
+  font-size: 22px !important;
+}
+.sidebarRow__title {
+  flex: 1;
+  margin-left: 20px;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.sidebarRow:hover {
+  background: rgba(88, 107, 164, 1);
+  background: -moz-linear-gradient(
+    left,
+    rgba(88, 107, 164, 1) 0%,
+    rgba(50, 67, 118, 1) 100%
+  );
+  background: -webkit-gradient(
+    left top,
+    right top,
+    color-stop(0%, rgba(88, 107, 164, 1)),
+    color-stop(100%, rgba(50, 67, 118, 1))
+  );
+  background: -webkit-linear-gradient(
+    left,
+    rgba(88, 107, 164, 1) 0%,
+    rgba(50, 67, 118, 1) 100%
+  );
+  background: -o-linear-gradient(
+    left,
+    rgba(88, 107, 164, 1) 0%,
+    rgba(50, 67, 118, 1) 100%
+  );
+  background: -ms-linear-gradient(
+    left,
+    rgba(88, 107, 164, 1) 0%,
+    rgba(50, 67, 118, 1) 100%
+  );
+  background: linear-gradient(
+    to right,
+    rgba(88, 107, 164, 1) 0%,
+    rgba(50, 67, 118, 1) 100%
+  );
+  cursor: pointer;
+}
+
+.sidebarRow:hover > .sidebarRow__icon {
+  color: #f68e5f;
+}
+
+.sidebarRow:hover > .sidebarRow__title {
+  font-weight: bold;
+  color: white;
+}
+
+.sidebarRow.selected {
+  background: rgba(88, 107, 164, 1);
+  background: -moz-linear-gradient(
+    left,
+    rgba(88, 107, 164, 1) 0%,
+    rgba(50, 67, 118, 1) 100%
+  );
+  background: -webkit-gradient(
+    left top,
+    right top,
+    color-stop(0%, rgba(88, 107, 164, 1)),
+    color-stop(100%, rgba(50, 67, 118, 1))
+  );
+  background: -webkit-linear-gradient(
+    left,
+    rgba(88, 107, 164, 1) 0%,
+    rgba(50, 67, 118, 1) 100%
+  );
+  background: -o-linear-gradient(
+    left,
+    rgba(88, 107, 164, 1) 0%,
+    rgba(50, 67, 118, 1) 100%
+  );
+  background: -ms-linear-gradient(
+    left,
+    rgba(88, 107, 164, 1) 0%,
+    rgba(50, 67, 118, 1) 100%
+  );
+  background: linear-gradient(
+    to right,
+    rgba(88, 107, 164, 1) 0%,
+    rgba(50, 67, 118, 1) 100%
+  );
+}
+
+.sidebarRow.selected > .sidebarRow__icon {
+  color: #f68e5f;
+}
+
+.sidebarRow.selected > .sidebarRow__title {
+  font-weight: bold;
+  color: white;
+}
