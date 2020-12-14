@@ -1,4 +1,4 @@
-const API_KEY = "AIzaSyAXoJOA4T5C3SAf7ed4KlU495E0nDekshU";
+const API_KEY = "";
 
 function fetchPopular(countryCode) {
   return `https://www.googleapis.com/youtube/v3/videos?part=snippet&part=player&part=statistics&chart=mostPopular&maxResults=50&regionCode=${countryCode}&key=${API_KEY}`;
