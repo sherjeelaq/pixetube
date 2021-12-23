@@ -1,32 +1,32 @@
-import React, { useEffect, useState } from "react";
-import "./SearchPage.css";
-import TuneOutlinedIcon from "@material-ui/icons/TuneOutlined";
-import ChannelRow from "./ChannelRow";
-import VideoRow from "./VideoRow";
-import { withRouter } from "react-router-dom";
-import sr from "../response";
-import requests from "../requests";
-import millify from "millify";
+import React, { useEffect, useState } from "react"
+import "./SearchPage.css"
+import TuneOutlinedIcon from "@material-ui/icons/TuneOutlined"
+import ChannelRow from "./ChannelRow"
+import VideoRow from "./VideoRow"
+import { withRouter } from "react-router-dom"
+import sr from "../response"
+import requests from "../requests"
+import millify from "millify"
 
 function SearchPage({ match }) {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState([])
 
   useEffect(() => {
     const fetchQuery = async () => {
       fetch(requests.fetchSearch(match.params.searchTerm))
         .then((response) => response.json())
         .then((data) => {
-          const entries = Object.entries(data.items);
-          setData(entries);
+          const entries = Object.entries(data.items)
+          setData(entries)
         })
         .catch((error) => {
-          console.error("Error:", error);
-          const entries = Object.entries(sr.items);
-          setData(entries);
-        });
-    };
-    fetchQuery();
-  }, [match.params.searchTerm]);
+          console.error("Error:", error)
+          const entries = Object.entries(sr.items)
+          setData(entries)
+        })
+    }
+    fetchQuery()
+  }, [match.params.searchTerm])
 
   return (
     <div className="searchPage">
@@ -45,11 +45,11 @@ function SearchPage({ match }) {
               channel={item[1].snippet.title}
               noOfVideos={`${millify(Math.floor(Math.random() * 2000) + 150, {
                 precision: 1,
-                lowercase: false,
+                lowercase: false
               })}`}
               subs={`${millify(Math.floor(Math.random() * 10000000) + 100000, {
                 precision: 1,
-                lowercase: false,
+                lowercase: false
               })}`}
               verified={true}
               description={item[1].snippet.description}
@@ -72,7 +72,7 @@ function SearchPage({ match }) {
 
       <hr />
     </div>
-  );
+  )
 }
 
-export default withRouter(SearchPage);
+export default withRouter(SearchPage)

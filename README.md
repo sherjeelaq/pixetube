@@ -13,7 +13,7 @@
     <a href="https://github.com/sherjeelaq/pixetube"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://fir-3a7d2.web.app/">View Demo</a>
+    <a href="https://pixe-tube.web.app/">View Demo</a>
     ·
     <a href="https://github.com/sherjeelaq/pixetube/issues">Report Bug</a>
     ·

@@ -1,9 +1,9 @@
-import React from "react";
-import truncatise from "truncatise";
-import "./VideoRow.css";
-import CheckCircleIcon from "@material-ui/icons/CheckCircle";
-import { Tooltip } from "@material-ui/core";
-import Moment from "react-moment";
+import React from "react"
+import truncatise from "truncatise"
+import "./VideoRow.css"
+import CheckCircleIcon from "@material-ui/icons/CheckCircle"
+import { Tooltip } from "@material-ui/core"
+import Moment from "react-moment"
 
 function VideoRow({
   link,
@@ -12,7 +12,7 @@ function VideoRow({
   channel,
   title,
   image,
-  verified,
+  verified
 }) {
   return (
     <div className="videoRow">
@@ -45,13 +45,13 @@ function VideoRow({
               TruncateBy: "characters",
               Strict: false,
               StripHTML: true,
-              Suffix: "...",
+              Suffix: "..."
             })}
           </p>
         </a>
       </div>
     </div>
-  );
+  )
 }
 
-export default VideoRow;
+export default VideoRow
