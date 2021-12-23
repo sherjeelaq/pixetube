@@ -5,8 +5,15 @@
 /.pnp
 .pnp.js
 
+.env
+
 # testing
 /coverage
+/.firebase
+.firebaserc
+firebase.json
+firebase-debug.log
+package-lock.json
 
 # production
 /build
