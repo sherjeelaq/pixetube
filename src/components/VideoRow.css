@@ -1,0 +1,32 @@
+.videoRow {
+  display: flex;
+  margin-bottom: 30px;
+  max-width: 700px;
+  min-width: 300px;
+  overflow: hidden;
+}
+
+.videoRow > a > img {
+  margin-top: -34px;
+  margin-bottom: -34px;
+  width: 300px;
+}
+.videoRow__text {
+  margin-left: 14px;
+}
+.videoRow__headline {
+  font-size: 14px;
+  color: #606060;
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+}
+.videoRow__verified {
+  font-size: 14px !important;
+  margin: 0 6px;
+}
+.videoRow__description {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #606060;
+}

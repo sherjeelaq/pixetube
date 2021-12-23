@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Pixetube - All in one video hub",
+  "name": "Watch your favourite videos and music all in one spot",
   "icons": [
     {
       "src": "favicon.ico",

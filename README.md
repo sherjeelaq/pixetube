@@ -1,68 +1,91 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <a href="https://github.com/sherjeelaq/pixetube">
+    <img src="public/logo512.png" alt="Logo" width="80" height="80">
+  </a>
 
-## Available Scripts
+  <h3 align="center">Pixetube</h3>
 
-In the project directory, you can run:
+  <p align="center">
+    Pixetube created using React.js and Youtube Data API where users can search the youtube database for videos.
+    <br />
+    <a href="https://github.com/sherjeelaq/pixetube"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://fir-3a7d2.web.app/">View Demo</a>
+    ·
+    <a href="https://github.com/sherjeelaq/pixetube/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/sherjeelaq/pixetube/issues">Request Feature</a>
+  </p>
+</p>
 
-### `npm start`
+<!-- TABLE OF CONTENTS -->
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Table of Contents
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+- [About the Project](#about-the-project)
+  - [Built With](#built-with)
+- [Getting Started](#getting-started)
+- [License](#license)
+- [Contact](#contact)
 
-### `npm test`
+<!-- ABOUT THE PROJECT -->
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## About The Project
 
-### `npm run build`
+### Built With
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [React.js](https://reactjs.org/)
+- [Material UI](https://material-ui.com/)
+- [Axios](https://www.npmjs.com/package/axios)
+- [React Router Dom](https://reactrouter.com/web/guides/quick-start)
+- [Millify](https://www.npmjs.com/package/millify)
+- [Moment](https://www.npmjs.com/package/react-moment)
+- [React Elastic Carousel](https://www.npmjs.com/package/react-elastic-carousel)
+- [Truncatise](https://www.npmjs.com/package/truncatise)
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+<!-- GETTING STARTED -->
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Getting Started
 
-### `npm run eject`
+To get a local copy up and running follow these simple steps.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Prerequisites
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This is an example of how to list things you need to use the software and how to install them.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- npm
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```sh
+npm install npm@latest -g
+```
 
-## Learn More
+### Installation
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. Clone the repo
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```sh
+git clone https://github.com/sherjeelaq/pixetube.git
+```
 
-### Code Splitting
+2. Install NPM packages
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+```sh
+npm install
+```
 
-### Analyzing the Bundle Size
+<!-- LICENSE -->
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+## License
 
-### Making a Progressive Web App
+Distributed under the GNU License. See `LICENSE` for more information.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+<!-- CONTACT -->
 
-### Advanced Configuration
+## Contact
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+Sherjeel Afsar - [Contact Me](mailto:laxer.afxar@gmail.com)
 
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Project Link: [https://github.com/sherjeelaq/pixetube](https://github.com/sherjeelaq/pixetube)
