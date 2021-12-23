@@ -35,8 +35,6 @@
 
 ## About The Project
 
-[<img src="https://im4.ezgif.com/tmp/ezgif-4-a870aac9a60c.gif" width="100%"/>](https://pixe-tube.web.app/)
-
 ### Built With
 
 - [React.js](https://reactjs.org/)

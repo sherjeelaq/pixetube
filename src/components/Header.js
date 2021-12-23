@@ -1,15 +1,22 @@
-import React, { useState } from "react";
-import "./Header.css";
-import MenuIcon from "@material-ui/icons/Menu";
-import SearchIcon from "@material-ui/icons/Search";
-import VideoCallIcon from "@material-ui/icons/VideoCall";
-import AppsIcon from "@material-ui/icons/Apps";
-import NotificationsIcon from "@material-ui/icons/Notifications";
-import { Avatar } from "@material-ui/core";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react"
+import "./Header.css"
+import MenuIcon from "@material-ui/icons/Menu"
+import SearchIcon from "@material-ui/icons/Search"
+import VideoCallIcon from "@material-ui/icons/VideoCall"
+import AppsIcon from "@material-ui/icons/Apps"
+import NotificationsIcon from "@material-ui/icons/Notifications"
+import { Avatar } from "@material-ui/core"
+import { Link } from "react-router-dom"
 
-function Header() {
-  const [inputSearch, setInputSearch] = useState("");
+function Header({ searchTerm }) {
+  const [inputSearch, setInputSearch] = useState("")
+
+  useEffect(() => {
+    if (searchTerm && searchTerm.length > 0) {
+      setInputSearch(searchTerm)
+    }
+  }, [searchTerm])
+
   return (
     <div className="header">
       <div className="header__left">
@@ -43,7 +50,7 @@ function Header() {
         <Avatar />
       </div>
     </div>
-  );
+  )
 }
 
-export default Header;
+export default Header
