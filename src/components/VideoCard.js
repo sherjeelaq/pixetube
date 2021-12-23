@@ -1,8 +1,8 @@
-import { Avatar } from "@material-ui/core";
-import React from "react";
-import "./VideoCard.css";
-import truncatise from "truncatise";
-import Moment from "react-moment";
+import { Avatar } from "@material-ui/core"
+import React from "react"
+import "./VideoCard.css"
+import truncatise from "truncatise"
+import Moment from "react-moment"
 
 function VideoCard({
   link,
@@ -11,7 +11,7 @@ function VideoCard({
   channel,
   views,
   timestamp,
-  channelImage,
+  channelImage
 }) {
   return (
     <div className="videoCard">
@@ -33,7 +33,7 @@ function VideoCard({
                 TruncateBy: "characters",
                 Strict: false,
                 StripHTML: true,
-                Suffix: "...",
+                Suffix: "..."
               })}
             </h4>
             <p>{channel}</p>
@@ -44,7 +44,7 @@ function VideoCard({
         </a>
       </div>
     </div>
-  );
+  )
 }
 
-export default VideoCard;
+export default VideoCard

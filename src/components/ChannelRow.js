@@ -1,7 +1,7 @@
-import { Avatar, Tooltip } from "@material-ui/core";
-import React from "react";
-import "./ChannelRow.css";
-import CheckCircleIcon from "@material-ui/icons/CheckCircle";
+import { Avatar, Tooltip } from "@material-ui/core"
+import React from "react"
+import "./ChannelRow.css"
+import CheckCircleIcon from "@material-ui/icons/CheckCircle"
 
 function ChannelRow({
   image,
@@ -10,7 +10,7 @@ function ChannelRow({
   noOfVideos,
   description,
   verified,
-  link,
+  link
 }) {
   return (
     <div className="channelRow">
@@ -35,7 +35,7 @@ function ChannelRow({
         <p>{description}</p>
       </div>
     </div>
-  );
+  )
 }
 
-export default ChannelRow;
+export default ChannelRow
