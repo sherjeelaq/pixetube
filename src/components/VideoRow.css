@@ -1,16 +1,20 @@
 .videoRow {
   display: flex;
   margin-bottom: 30px;
-  max-width: 700px;
   min-width: 300px;
   overflow: hidden;
 }
 
-.videoRow > a > img {
+.videoRow__image {
   margin-top: -34px;
   margin-bottom: -34px;
   width: 300px;
 }
+
+.videoRow__image--loading {
+  height: 210px;
+}
+
 .videoRow__text {
   margin-left: 14px;
 }

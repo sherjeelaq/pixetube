@@ -1,7 +1,9 @@
-import { Avatar, Tooltip } from "@material-ui/core"
-import React from "react"
-import "./ChannelRow.css"
-import CheckCircleIcon from "@material-ui/icons/CheckCircle"
+import { Avatar, Tooltip } from '@material-ui/core'
+import React from 'react'
+import './ChannelRow.css'
+import CheckCircleIcon from '@material-ui/icons/CheckCircle'
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
 
 function ChannelRow({
   image,
@@ -10,29 +12,46 @@ function ChannelRow({
   noOfVideos,
   description,
   verified,
-  link
+  link,
+  loading
 }) {
   return (
-    <div className="channelRow">
-      <a href={link}>
-        <Avatar src={image} alt={channel} className="channelRow__logo" />
-      </a>
-
-      <div className="channelRow__text">
-        <a href={link}>
-          <h4>
-            {channel}{" "}
-            {verified && (
-              <Tooltip title="Verified" placement="top">
-                <CheckCircleIcon className="channelRow__verified" />
-              </Tooltip>
-            )}
-          </h4>
+    <div className='channelRow'>
+      {loading ? (
+        <Skeleton circle className='channelRow__logo' />
+      ) : (
+        <a href={link} target='_blank' rel='noopener noreferrer'>
+          <Avatar
+            src={image}
+            alt={channel}
+            className='channelRow__logo'
+          />
         </a>
+      )}
+      <div className='channelRow__text'>
+        {loading ? (
+          <Skeleton count={1} width={200} />
+        ) : (
+          <a href={link} target='_blank' rel='noopener noreferrer'>
+            <h4>
+              {channel}{' '}
+              {verified && (
+                <Tooltip title='Verified' placement='top'>
+                  <CheckCircleIcon className='channelRow__verified' />
+                </Tooltip>
+              )}
+            </h4>
+          </a>
+        )}
+
         <p>
-          {subs} subscribers • {noOfVideos} videos
+          {loading ? (
+            <Skeleton count={1} width={100} />
+          ) : (
+            `${subs} subscribers • ${noOfVideos} videos`
+          )}
         </p>
-        <p>{description}</p>
+        <p>{description || <Skeleton count={3} width={300} />}</p>
       </div>
     </div>
   )
