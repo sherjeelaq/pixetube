@@ -1,6 +1,9 @@
 .sidebar {
-  flex: 0.13;
-  min-width: 170px !important;
+  width: 200px;
+  background-color: #fff;
+  position: sticky;
+  top: 60px;
+  height: calc(100vh - 60px);
 }
 
 .sidebar > hr {

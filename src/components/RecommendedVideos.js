@@ -5,36 +5,27 @@ import axios from 'axios'
 import requests from '../requests'
 import searchresults from '../searchrequests'
 import millify from 'millify'
-import Carousel, { consts } from 'react-elastic-carousel'
-import { Button } from '@material-ui/core'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import 'swiper/swiper.min.css'
 
 function RecommendedVideos() {
   const [code, setCode] = useState('')
   const [popularData, setPopularData] = useState([])
   const [loading, setLoading] = useState(false)
 
-  const breakPoints = [
-    { width: 1, itemsToShow: 1 },
-    { width: 300, itemsToShow: 3 },
-    { width: 550, itemsToShow: 5, itemsToScroll: 1 },
-    { width: 850, itemsToShow: 5 },
-    { width: 1150, itemsToShow: 7, itemsToScroll: 1 },
-    { width: 1450, itemsToShow: 8 },
-    { width: 1750, itemsToShow: 10 }
-  ]
   useEffect(() => {
-    // const entries = Object.entries(searchresults.items);
-    // setPopularData(entries);
     async function fetchData() {
-      const request = await axios.get(
-        'https://api.db-ip.com/v2/free/self'
-      )
-      setCode(
-        request && request.data && request.data.countryCode
-          ? request.data.countryCode
-          : 'US'
-      )
-      return request
+      try {
+        const request = await axios.get('http://ip-api.com/json/')
+
+        setCode(
+          request && request.data && request.data.countryCode
+            ? request.data.countryCode
+            : 'US'
+        )
+      } catch (e) {
+        setCode('US')
+      }
     }
 
     fetchData()
@@ -65,19 +56,6 @@ function RecommendedVideos() {
     }
   }, [code])
 
-  const myArrow = ({ type, onClick, isEdge }) => {
-    const pointer = type === consts.PREV ? '<' : '>'
-    return (
-      <Button
-        className='recommendedVideos__pointers'
-        onClick={onClick}
-        disabled={isEdge}
-      >
-        {pointer}
-      </Button>
-    )
-  }
-
   const carouselItems = useMemo(() => {
     return [
       'All',
@@ -96,19 +74,25 @@ function RecommendedVideos() {
       'Lofi'
     ]
   }, [])
+
   return (
     <div className='recommendedVideos'>
       <div className='recommendedVideos__carousel'>
-        <Carousel
-          itemsToShow={6}
-          pagination={false}
-          renderArrow={myArrow}
-          breakPoints={breakPoints}
+        <Swiper
+          spaceBetween={0}
+          slidesPerView={'auto'}
+          onSlideChange={() => console.log('slide change')}
+          onSwiper={swiper => console.log(swiper)}
         >
-          {carouselItems.map(c => (
-            <h4 className='recommendedVideos__carouselItem'>{c}</h4>
+          {carouselItems.map((c, i) => (
+            <SwiperSlide
+              key={c + '' + i}
+              className='recommendedVideos__carouselItemContainer'
+            >
+              <h4 className='recommendedVideos__carouselItem'>{c}</h4>
+            </SwiperSlide>
           ))}
-        </Carousel>
+        </Swiper>
       </div>
 
       <div className='recommendedVideos__videos'>
@@ -120,54 +104,50 @@ function RecommendedVideos() {
             popularData.length > 0 &&
             popularData.map(data => {
               return (
-                <>
-                  <VideoCard
-                    key={
-                      data[1] && data[1].id ? data[1].id : data._id
+                <VideoCard
+                  key={data[1] && data[1].id ? data[1].id : data._id}
+                  link={`https://www.youtube.com/watch?v=${
+                    data.id
+                      ? data.id
+                      : data[1] && data[1].id
+                      ? data[1].id
+                      : ''
+                  }`}
+                  title={
+                    data[1] && data[1].snippet.title
+                      ? data[1].snippet.title
+                      : data.snippet.title
+                  }
+                  views={`${millify(
+                    data[1] && data[1].statistics.viewCount
+                      ? data[1].statistics.viewCount
+                      : data.statistics.viewCount,
+                    {
+                      precision: 1,
+                      lowercase: false
                     }
-                    link={`https://www.youtube.com/watch?v=${
-                      data.id
-                        ? data.id
-                        : data[1] && data[1].id
-                        ? data[1].id
-                        : ''
-                    }`}
-                    title={
-                      data[1] && data[1].snippet.title
-                        ? data[1].snippet.title
-                        : data.snippet.title
-                    }
-                    views={`${millify(
-                      data[1] && data[1].statistics.viewCount
-                        ? data[1].statistics.viewCount
-                        : data.statistics.viewCount,
-                      {
-                        precision: 1,
-                        lowercase: false
-                      }
-                    )}`}
-                    timestamp={
-                      data[1] && data[1].snippet.publishedAt
-                        ? data[1].snippet.publishedAt
-                        : data.snippet.publishedAt
-                    }
-                    channelImage={
-                      data[1] && data[1].snippet.title
-                        ? data[1].snippet.title
-                        : data.snippet.title
-                    }
-                    channel={
-                      data[1] && data[1].snippet.channelTitle
-                        ? data[1].snippet.channelTitle
-                        : data.snippet.channelTitle
-                    }
-                    image={
-                      data[1] && data[1].snippet.thumbnails.high.url
-                        ? data[1].snippet.thumbnails.high.url
-                        : data.snippet.thumbnails.high.url
-                    }
-                  />
-                </>
+                  )}`}
+                  timestamp={
+                    data[1] && data[1].snippet.publishedAt
+                      ? data[1].snippet.publishedAt
+                      : data.snippet.publishedAt
+                  }
+                  channelImage={
+                    data[1] && data[1].snippet.title
+                      ? data[1].snippet.title
+                      : data.snippet.title
+                  }
+                  channel={
+                    data[1] && data[1].snippet.channelTitle
+                      ? data[1].snippet.channelTitle
+                      : data.snippet.channelTitle
+                  }
+                  image={
+                    data[1] && data[1].snippet.thumbnails.high.url
+                      ? data[1].snippet.thumbnails.high.url
+                      : data.snippet.thumbnails.high.url
+                  }
+                />
               )
             })}
       </div>

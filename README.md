@@ -81,11 +81,3 @@ npm install
 ## License
 
 Distributed under the GNU License. See `LICENSE` for more information.
-
-<!-- CONTACT -->
-
-## Contact
-
-Sherjeel Afsar - [Contact Me](mailto:laxer.afxar@gmail.com)
-
-Project Link: [https://github.com/sherjeelaq/pixetube](https://github.com/sherjeelaq/pixetube)

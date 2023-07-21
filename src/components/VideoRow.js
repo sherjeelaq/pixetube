@@ -23,7 +23,7 @@ function VideoRow({
         <Skeleton className='videoRow__image videoRow__image--loading' />
       ) : (
         <a href={link} target='_blank' rel='noopener noreferrer'>
-          <img src={image} alt={title} />
+          <img src={image} alt={title} className='videoRow__image' />
         </a>
       )}
       <div className='videoRow__text'>

@@ -8,6 +8,7 @@
 
 .videoCard__thumbnail {
   width: 320px;
+  border-radius: 12px;
 }
 
 .videoCard__thumbnail--loading {

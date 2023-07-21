@@ -2,10 +2,11 @@
   display: flex;
   align-items: center;
   padding: 10px 20px;
+  cursor: pointer;
 }
 
 .sidebarRow__icon {
-  color: #f68e5f;
+  color: #070600;
   font-size: 22px !important;
 }
 .sidebarRow__title {
@@ -16,43 +17,17 @@
 }
 
 .sidebarRow:hover {
-  background: rgba(88, 107, 164, 1);
-  background: -moz-linear-gradient(
-    left,
-    rgba(88, 107, 164, 1) 0%,
-    rgba(50, 67, 118, 1) 100%
-  );
-  background: -webkit-gradient(
-    left top,
-    right top,
-    color-stop(0%, rgba(88, 107, 164, 1)),
-    color-stop(100%, rgba(50, 67, 118, 1))
-  );
-  background: -webkit-linear-gradient(
-    left,
-    rgba(88, 107, 164, 1) 0%,
-    rgba(50, 67, 118, 1) 100%
-  );
-  background: -o-linear-gradient(
-    left,
-    rgba(88, 107, 164, 1) 0%,
-    rgba(50, 67, 118, 1) 100%
-  );
-  background: -ms-linear-gradient(
-    left,
-    rgba(88, 107, 164, 1) 0%,
-    rgba(50, 67, 118, 1) 100%
-  );
+  background: rgb(35, 181, 211);
   background: linear-gradient(
-    to right,
-    rgba(88, 107, 164, 1) 0%,
-    rgba(50, 67, 118, 1) 100%
+    90deg,
+    rgba(35, 181, 211, 1) 0%,
+    rgba(39, 154, 241, 1) 100%
   );
   cursor: pointer;
 }
 
 .sidebarRow:hover > .sidebarRow__icon {
-  color: #f68e5f;
+  color: #f7f7ff;
 }
 
 .sidebarRow:hover > .sidebarRow__title {
@@ -61,45 +36,19 @@
 }
 
 .sidebarRow.selected {
-  background: rgba(88, 107, 164, 1);
-  background: -moz-linear-gradient(
-    left,
-    rgba(88, 107, 164, 1) 0%,
-    rgba(50, 67, 118, 1) 100%
-  );
-  background: -webkit-gradient(
-    left top,
-    right top,
-    color-stop(0%, rgba(88, 107, 164, 1)),
-    color-stop(100%, rgba(50, 67, 118, 1))
-  );
-  background: -webkit-linear-gradient(
-    left,
-    rgba(88, 107, 164, 1) 0%,
-    rgba(50, 67, 118, 1) 100%
-  );
-  background: -o-linear-gradient(
-    left,
-    rgba(88, 107, 164, 1) 0%,
-    rgba(50, 67, 118, 1) 100%
-  );
-  background: -ms-linear-gradient(
-    left,
-    rgba(88, 107, 164, 1) 0%,
-    rgba(50, 67, 118, 1) 100%
-  );
+  background: rgb(35, 181, 211);
   background: linear-gradient(
-    to right,
-    rgba(88, 107, 164, 1) 0%,
-    rgba(50, 67, 118, 1) 100%
+    90deg,
+    rgba(35, 181, 211, 1) 0%,
+    rgba(39, 154, 241, 1) 100%
   );
 }
 
 .sidebarRow.selected > .sidebarRow__icon {
-  color: #f68e5f;
+  color: #f7f7ff;
 }
 
 .sidebarRow.selected > .sidebarRow__title {
   font-weight: bold;
-  color: white;
+  color: #f7f7ff;
 }

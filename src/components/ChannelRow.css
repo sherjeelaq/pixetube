@@ -1,7 +1,7 @@
 .channelRow {
   display: flex;
   align-items: center;
-  width: 80%;
+  width: 90%;
 }
 
 .channelRow__verified {
@@ -12,6 +12,7 @@
 
 .channelRow__text {
   display: flex;
+  flex: 1;
   flex-direction: column;
 }
 
